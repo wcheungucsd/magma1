@@ -14,7 +14,7 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 USER root
 
 RUN apt-get -y install htop
-RUN apt-get -y install ping
+RUN apt-get -y install inetutils-ping
 
 # 3) install packages using notebook user
 USER jovyan
