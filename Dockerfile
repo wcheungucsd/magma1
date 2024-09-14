@@ -13,8 +13,11 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 # 2) change to root to install packages
 USER root
 
-RUN apt-get -y install htop
+#RUN apt-get -y install htop
 #RUN apt-get -y install ping
+RUN apt-get update && \
+  apt-get -y install htop && \
+  apt-get -y install ping
 
 # 3) install packages using notebook user
 USER jovyan
